@@ -41,7 +41,7 @@ const frameOne = ()=>{
         y:'0',
         duration:0.8,
     }).from([
-        '#discoverText', '#cashbackText', '#debitText'], {
+        '#discoverOrangeText', '#cashbackText', '#debitOrangeText'], {
         opacity: 0,
         x: '40px',
         duration: 0.5,
@@ -80,7 +80,7 @@ const frameOne = ()=>{
     },'<').to('.middleCircleItem.white', {
         alpha: 0,
         duration: 0.1
-    }, '=-0.5').to(['#introducingText', '#discoverText', '#cashbackText', '#debitText'], {
+    }, '=-0.5').to(['#introducingText', '#discoverOrangeText', '#cashbackText', '#debitOrangeText'], {
         alpha: 0,
         duration: 0.1
     }, '=-0.3').to('#card',{
@@ -120,26 +120,63 @@ const frameOne = ()=>{
         }).fromTo('.middleCircleItem.grey',{
             display:'none'
     },{
-        scale: 20,
+        scale: 20.5,
         display:'block',
 
     }, '<').to('#card', {
         rotation: 50,
         y: '170px'
-    },'<');
+    }, '<').fromTo('.realLifeObjectItem', {
+        alpha: 0,
+        scale: 0.5,
+    }, {
+        alpha: 1,
+        scale: 1,
+        duration: 0.3,
+        stagger: 2,
+
+    }, '=-0.1')
+        .to('.realLifeObjectItem', {
+            alpha: 0,
+            y: '20px',
+            stagger: 2,
+            duration: 0.3
+
+        }, '=-2.3').from(['#cashbackOnText', '#debitBlueText'], {
+        x: '20px',
+        alpha: 0,
+        duration: 0.5,
+        stagger: 0.2,
+    },'<=-2').to('#middleCircleOrange',{
+        scale: 0.6,
+    }).fromTo('.middleCircleItem.white',{
+        alpha: 1,
+        scale: 0
+    },{
+        scale: 1.06,
+        duration: 0.5,
+    },'<').to(['#cashbackOnText', '#debitBlueText'],{
+        alpha : 0,
+        duration: 0.5,
+    }).from(['#discoverBlueText', '#cashBackDebitText', '#cashBackOrangeText', '#isntJustForText', '#creditCardsText'], {
+        alpha:0,
+        x:'20px',
+        duration: 0.5,
+        stagger: 0.1,
+    });
 
     return tl;
 }
 
-const seekTime = 2
+const seekTime = 13;
 
 let master = gsap.timeline(
     {
-    onComplete : ()=>{
-        master
-            .seek(seekTime)
-            .play();
-    }
+    // onComplete : ()=>{
+    //     master
+    //         .seek(seekTime)
+    //         .play();
+    // }
 }
 )
     .add(introCirclesScene())

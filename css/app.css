@@ -27,9 +27,9 @@ body, html {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  cursor: pointer;
+  pointer-events: none;
 }
-#app .c-content {
+#app .c-textFrame1 {
   position: relative;
   z-index: 1;
   padding: 15px;
@@ -37,10 +37,10 @@ body, html {
   flex-direction: column;
   height: 100%;
 }
-#app .c-content img:not(:first-child) {
+#app .c-textFrame1 img:not(:first-child) {
   margin-top: 13px;
 }
-#app .c-content img:last-child {
+#app .c-textFrame1 img:last-child {
   margin-top: auto;
 }
 #app .c-introBorderItem {
@@ -109,6 +109,7 @@ body, html {
 }
 #app #middleCircleOrange .middleCircleItem.white {
   background-color: white;
+  z-index: 6;
 }
 #app #middleCircleOrange .middleCircleItem.grey {
   width: 10px;
@@ -127,6 +128,47 @@ body, html {
   height: 200px;
   border: 4px solid #d8176f;
   border-radius: 100%;
+}
+#app .c-realLifeObjects {
+  position: absolute;
+  top: 100px;
+  left: 120px;
+  z-index: 3;
+  height: 100px;
+  width: 100px;
+}
+#app .c-realLifeObjects .realLifeObjectItem {
+  position: absolute;
+}
+#app .c-realLifeObjects .realLifeObjectItem.cup {
+  top: -35px;
+  left: 40px;
+}
+#app .c-realLifeObjects .realLifeObjectItem.yoga {
+  top: 0px;
+  left: -25px;
+}
+#app .c-realLifeObjects .realLifeObjectItem.sushi {
+  top: -10px;
+  left: -7px;
+}
+#app .c-textFrame2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 19px;
+}
+#app .c-textFrame2 img {
+  margin-top: 10px;
+}
+#app .c-textFrame3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 19px;
+}
+#app .c-textFrame3 > img {
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=app.css.map */
