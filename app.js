@@ -67,7 +67,17 @@ const frameOne = ()=>{
             scale: 1,
             rotation : 0,
             duration: 0.4,
-        }, '=-1.3').to('#middleCircleOrange', {
+        }, '=-1.3')
+
+
+    return tl;
+}
+
+const frameTwo = ()=>{
+
+    const tl = gsap.timeline();
+
+    tl.to('#middleCircleOrange', {
         x: '-80px',
         y: '-140px',
         scale: 0.5,
@@ -119,23 +129,23 @@ const frameOne = ()=>{
             borderWidth: 8,
         }).fromTo('.middleCircleItem.grey',{
             display:'none'
-    },{
-        scale: 19,
-        display:'block',
+        },{
+            scale: 19,
+            display:'block',
 
-    }, '<').to('#card', {
-        rotation: 50,
-        y: '170px'
-    }, '<').fromTo('.realLifeObjectItem', {
-        alpha: 0,
-        scale: 0.5,
-    }, {
-        alpha: 1,
-        scale: 1,
-        duration: 0.3,
-        stagger: 2,
+        }, '<').to('#card', {
+            rotation: 50,
+            y: '170px'
+        }, '<').fromTo('.realLifeObjectItem', {
+            alpha: 0,
+            scale: 0.5,
+        }, {
+            alpha: 1,
+            scale: 1,
+            duration: 0.3,
+            stagger: 2,
 
-    }, '=-0.1')
+        }, '=-0.1')
         .to('.realLifeObjectItem', {
             alpha: 0,
             y: '20px',
@@ -143,11 +153,22 @@ const frameOne = ()=>{
             duration: 0.3
 
         }, '=-2.3').from(['#cashbackOnText', '#debitBlueText'], {
-        x: '20px',
-        alpha: 0,
-        duration: 0.5,
-        stagger: 0.2,
-    },'<=-2').to('#middleCircleOrange',{
+            x: '20px',
+            alpha: 0,
+            duration: 0.5,
+            stagger: 0.2,
+        },'<=-2')
+
+    return tl;
+
+
+
+}
+
+const frameThree = ()=>{
+    const tl = gsap.timeline();
+
+    tl.to('#middleCircleOrange',{
         scale: 0.9,
         x: '0px',
         y: '-5px',
@@ -204,7 +225,9 @@ let master = gsap.timeline(
 }
 )
     .add(introCirclesScene())
-    .add(frameOne(), '=-1.5');
+    .add(frameOne(), '=-1.5')
+    .add(frameTwo())
+    .add(frameThree());
 
 master.seek(seekTime)
 
