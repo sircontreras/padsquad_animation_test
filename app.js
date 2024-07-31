@@ -67,7 +67,38 @@ const frameOne = ()=>{
             scale: 1,
             rotation : 0,
             duration: 0.4,
-        }, '=-1.3');
+        }, '=-1.3').to('#middleCircleOrange', {
+        x: '-80px',
+        y: '-140px',
+        scale: 0.4,
+        borderWidth: 0,
+        duration: 0.5
+    }).to('#card', {
+        scale: 1.6,
+        x:'60',
+        y:'10'
+    },'<').to('#middleCircleWhite', {
+        alpha: 0,
+        duration: 0.1
+    }, '=-0.5').to(['#introducingText', '#discoverText', '#cashbackText', '#debitText'], {
+        alpha: 0,
+        duration: 0.1
+    }, '=-0.3').to('#card',{
+        rotation: -5,
+        scale: 1.5,
+        y:'-15',
+        x:'50px',
+        duration: 0.2,
+        ease: "power1.in"
+    }).to('#card',{
+        rotation: 0,
+        scale: 1.6,
+        duration: 0.3,
+        x:'65',
+        y:'10px',
+        ease:"power1.out"
+
+    });
 
     return tl;
 }
