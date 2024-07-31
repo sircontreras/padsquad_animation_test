@@ -1,0 +1,102 @@
+@import "colors";
+
+*{
+  box-sizing: border-box;
+}
+
+body, html{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #505050;
+
+}
+
+#app{
+
+  width: 300px;
+  height: 250px;
+  border: 1px solid black;
+  //background-color: $blue_dark_1;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+
+  .c-content{
+    position: relative;
+    z-index: 1;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+
+    img{
+      &:not(:first-child){
+        margin-top: 13px;
+      }
+
+      &:last-child{
+        margin-top: auto;
+      }
+    }
+  }
+
+  .c-introBorderItem {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    transform: scale(0);
+
+    &.fuchsia, &.orange{
+      z-index: 2;
+    }
+
+    .introBorderItem {
+
+      border-width: 50px;
+      border-style: solid;
+      border-radius: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+
+      &.fuchsia {
+        border-color: $fuchsia_medium_1;
+
+      }
+
+      &.orange {
+        border-color: $orange_medium_1;
+        z-index: 2;
+
+      }
+
+      &.white {
+        border-color: white;
+        background-color: white;
+
+      }
+    }
+
+  }
+
+  .card{
+    position: absolute;
+    right : -25px;
+    bottom: -168px;
+
+  }
+
+}
