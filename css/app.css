@@ -19,6 +19,16 @@ body, html {
   position: relative;
   overflow: hidden;
 }
+#app #borderLimit {
+  border: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  cursor: pointer;
+}
 #app .c-content {
   position: relative;
   z-index: 1;
@@ -69,10 +79,11 @@ body, html {
   border-color: white;
   background-color: white;
 }
-#app .card {
+#app #card {
   position: absolute;
   right: -25px;
   bottom: -168px;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=app.css.map */
