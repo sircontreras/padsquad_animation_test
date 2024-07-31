@@ -103,8 +103,15 @@ const frameOne = ()=>{
     return tl;
 }
 
-let master = gsap.timeline()
+let master = gsap.timeline(
+    {
+    onComplete : ()=>{
+        master.seek(2.8).play();
+    }
+}
+)
     .add(introCirclesScene())
-    .add(frameOne(), '=-1.5')
+    .add(frameOne(), '=-1.5');
 
+master.seek(2.8)
 
