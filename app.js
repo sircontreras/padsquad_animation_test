@@ -70,13 +70,13 @@ const frameOne = ()=>{
         }, '=-1.3').to('#middleCircleOrange', {
         x: '-80px',
         y: '-140px',
-        scale: 0.4,
+        scale: 0.5,
         borderWidth: 0,
         duration: 0.5
     }).to('#card', {
         scale: 1.6,
-        x:'60',
-        y:'10'
+        x:'30',
+        y:'25'
     },'<').to('#middleCircleWhite', {
         alpha: 0,
         duration: 0.1
