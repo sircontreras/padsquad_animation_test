@@ -15,7 +15,7 @@ body, html {
   width: 300px;
   height: 250px;
   border: 1px solid black;
-  background-color: white;
+  background-color: #1F2036;
   position: relative;
   overflow: hidden;
 }
@@ -81,9 +81,32 @@ body, html {
 }
 #app #card {
   position: absolute;
-  right: -25px;
+  right: -20px;
   bottom: -168px;
-  z-index: 2;
+  z-index: 4;
+}
+#app #middleCircleOrange {
+  width: 225px;
+  height: 225px;
+  background-color: #ec6b29;
+  position: absolute;
+  z-index: 3;
+  right: -35px;
+  bottom: -130px;
+  border-radius: 100%;
+  border: 8px solid #d8176f;
+}
+#app #middleCircleOrange #middleCircleWhite {
+  background-color: white;
+  width: 90%;
+  height: 90%;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -32,11 +32,9 @@ const frameOne = ()=>{
 
     const tl = gsap.timeline();
     tl.fromTo('#introducingText',{
-
         display:'none',
         x : '30px',
         y:'80px'
-
     },{
         display:'block',
         x : '0',
@@ -62,10 +60,16 @@ const frameOne = ()=>{
         duration: 1.2,
         ease:"elastic.out(0.8,0.5)"
     }, '=-0.7')
+        .fromTo('#middleCircleOrange', {
+            scale: 0,
+            rotation: 25,
+        },{
+            scale: 1,
+            rotation : 0,
+            duration: 0.4,
+        }, '=-1.3');
 
     return tl;
-
-
 }
 
 let master = gsap.timeline()
