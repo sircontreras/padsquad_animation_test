@@ -148,7 +148,9 @@ const frameOne = ()=>{
         duration: 0.5,
         stagger: 0.2,
     },'<=-2').to('#middleCircleOrange',{
-        scale: 0.6,
+        scale: 0.8,
+        x:'-5px',
+        y: '-10px',
     }).fromTo('.middleCircleItem.white',{
         alpha: 1,
         scale: 0
@@ -163,6 +165,13 @@ const frameOne = ()=>{
         x:'20px',
         duration: 0.5,
         stagger: 0.1,
+    }).fromTo('#card' ,{
+        scale: 1,
+    },{
+        rotation: 0,
+        y: '10px',
+        x:'-5px',
+
     });
 
     return tl;
