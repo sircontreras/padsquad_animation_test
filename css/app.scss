@@ -108,7 +108,6 @@ body, html{
     right : -20px;
     bottom: -168px;
     z-index: 4;
-    //display: none;
 
   }
 
@@ -124,8 +123,7 @@ body, html{
     border-radius: 100%;
     border: 8px solid $fuchsia_medium_1;
 
-    #middleCircleWhite{
-      background-color: white;
+    .middleCircleItem{
       width: 90%;
       height: 90%;
       border-radius: 100%;
@@ -135,6 +133,35 @@ body, html{
       right: 0;
       bottom: 0;
       margin: auto;
+
+      &.white{
+        background-color: white;
+      }
+
+      &.grey{
+        width: 10px;
+        height: 10px;
+        background-color: $blue_dark_1;
+      }
+    }
+
+
+  }
+
+  .c-circlePulses{
+    position: absolute;
+    top: 13px;
+    left: 28px;
+    z-index: 3;
+    .circlePulseItem{
+      position: absolute;
+
+
+      width: 200px;
+      height: 200px;
+      border: 4px solid $fuchsia_medium_1;
+      border-radius: 100%;
+
 
     }
   }

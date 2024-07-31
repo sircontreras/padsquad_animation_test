@@ -77,7 +77,7 @@ const frameOne = ()=>{
         scale: 1.6,
         x:'30px',
         y:'20px'
-    },'<').to('#middleCircleWhite', {
+    },'<').to('.middleCircleItem.white', {
         alpha: 0,
         duration: 0.1
     }, '=-0.5').to(['#introducingText', '#discoverText', '#cashbackText', '#debitText'], {
@@ -99,17 +99,46 @@ const frameOne = ()=>{
         y:'25px',
         ease:"power1.out"
 
-    });
+    }).fromTo('.circlePulseItem',{
+        scale: 0.5,
+        display:'none',
+        width : gsap.getProperty('#middleCircleOrange', 'width','px'),
+        height : gsap.getProperty('#middleCircleOrange', 'height','px'),
+    }, {
+        display:'block',
+        scale: 0.8,
+        borderWidth : 0,
+        alpha : 0,
+        duration: 0.9,
+        stagger: 0.2
+    }, '=-0.3')
+        .to('#middleCircleOrange', {
+            x : '15px',
+            y: '-30px',
+            scale : 1.4,
+            borderWidth : 5,
+        }).fromTo('.middleCircleItem.grey',{
+            display:'none'
+    },{
+        scale: 20,
+        display:'block',
+
+    }, '<').to('#card', {
+        rotation: 50,
+        y: '170px'
+    },'<');
 
     return tl;
 }
 
-const seekTime = 2.5
+const seekTime = 2
 
 let master = gsap.timeline(
     {
     onComplete : ()=>{
-        master.seek(seekTime).play();
+        master
+            .seek(seekTime)
+            .play();
     }
 }
 )

@@ -96,8 +96,7 @@ body, html {
   border-radius: 100%;
   border: 8px solid #d8176f;
 }
-#app #middleCircleOrange #middleCircleWhite {
-  background-color: white;
+#app #middleCircleOrange .middleCircleItem {
   width: 90%;
   height: 90%;
   border-radius: 100%;
@@ -107,6 +106,27 @@ body, html {
   right: 0;
   bottom: 0;
   margin: auto;
+}
+#app #middleCircleOrange .middleCircleItem.white {
+  background-color: white;
+}
+#app #middleCircleOrange .middleCircleItem.grey {
+  width: 10px;
+  height: 10px;
+  background-color: #1F2036;
+}
+#app .c-circlePulses {
+  position: absolute;
+  top: 13px;
+  left: 28px;
+  z-index: 3;
+}
+#app .c-circlePulses .circlePulseItem {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 4px solid #d8176f;
+  border-radius: 100%;
 }
 
 /*# sourceMappingURL=app.css.map */
