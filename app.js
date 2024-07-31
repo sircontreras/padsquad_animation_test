@@ -75,8 +75,8 @@ const frameOne = ()=>{
         duration: 0.5
     }).to('#card', {
         scale: 1.6,
-        x:'30',
-        y:'25'
+        x:'30px',
+        y:'20px'
     },'<').to('#middleCircleWhite', {
         alpha: 0,
         duration: 0.1
@@ -86,16 +86,17 @@ const frameOne = ()=>{
     }, '=-0.3').to('#card',{
         rotation: -5,
         scale: 1.5,
-        y:'-15',
-        x:'50px',
+        x:'25px',
+        y:'-15px',
         duration: 0.2,
-        ease: "power1.in"
+        ease: "power1.in",
+        delay: 0.5,
     }).to('#card',{
         rotation: 0,
         scale: 1.6,
         duration: 0.3,
-        x:'65',
-        y:'10px',
+        x:'50',
+        y:'25px',
         ease:"power1.out"
 
     });
@@ -103,15 +104,17 @@ const frameOne = ()=>{
     return tl;
 }
 
+const seekTime = 2.5
+
 let master = gsap.timeline(
     {
     onComplete : ()=>{
-        master.seek(2.8).play();
+        master.seek(seekTime).play();
     }
 }
 )
     .add(introCirclesScene())
     .add(frameOne(), '=-1.5');
 
-master.seek(2.8)
+master.seek(seekTime)
 
