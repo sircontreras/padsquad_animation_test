@@ -169,17 +169,30 @@ const frameOne = ()=>{
     },'=-0.2').to(['#cashbackOnText', '#debitBlueText'],{
         alpha : 0,
         duration: 0.5,
-    }).from(['#discoverBlueText', '#cashBackDebitText', '#cashBackOrangeText', '#isntJustForText', '#creditCardsText'], {
+    },'<=-0.3').from(['#discoverBlueText', '#cashBackDebitText', '#cashBackOrangeText', '#isntJustForText', '#creditCardsText', '#c-learnMoreBtn'], {
         alpha:0,
         x:'20px',
         duration: 0.5,
         stagger: 0.1,
-    });
+    },'=-0.9').to('#c-learnMoreBtn #btnBlurGlow',{
+        x: '160px',
+        duration: 0.2
+    }).to(
+        '#cashBackOrangeText',{
+            scale: 1.1,
+            duration: 0.2
+        }
+    ).to(
+        '#cashBackOrangeText',{
+            scale: 1,
+            duration: 0.3
+        }
+    );
 
     return tl;
 }
 
-const seekTime = 12;
+const seekTime = 0;
 
 let master = gsap.timeline(
     {
