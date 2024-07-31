@@ -17,6 +17,7 @@ body, html {
   border: 1px solid black;
   background-color: #1F2036;
   position: relative;
+  overflow: hidden;
 }
 #app #borderLimit {
   border: 1px solid black;

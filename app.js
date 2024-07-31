@@ -116,11 +116,11 @@ const frameOne = ()=>{
             x : '15px',
             y: '-30px',
             scale : 1.4,
-            borderWidth : 5,
+            borderWidth: 8,
         }).fromTo('.middleCircleItem.grey',{
             display:'none'
     },{
-        scale: 20.5,
+        scale: 19,
         display:'block',
 
     }, '<').to('#card', {
@@ -148,16 +148,25 @@ const frameOne = ()=>{
         duration: 0.5,
         stagger: 0.2,
     },'<=-2').to('#middleCircleOrange',{
-        scale: 0.8,
-        x:'-5px',
-        y: '-10px',
+        scale: 0.9,
+        x: '0px',
+        y: '-5px',
     }).fromTo('.middleCircleItem.white',{
         alpha: 1,
         scale: 0
     },{
-        scale: 1.06,
+        scale: 1.01,
         duration: 0.5,
-    },'<').to(['#cashbackOnText', '#debitBlueText'],{
+    }, '<').fromTo('#card', {
+        scale: 1,
+    }, {
+        rotation: 0,
+        y: '0px',
+        x: '0px',
+        ease:"elastic.out(0.4,0.3)",
+        duration: 1
+
+    },'=-0.2').to(['#cashbackOnText', '#debitBlueText'],{
         alpha : 0,
         duration: 0.5,
     }).from(['#discoverBlueText', '#cashBackDebitText', '#cashBackOrangeText', '#isntJustForText', '#creditCardsText'], {
@@ -165,19 +174,12 @@ const frameOne = ()=>{
         x:'20px',
         duration: 0.5,
         stagger: 0.1,
-    }).fromTo('#card' ,{
-        scale: 1,
-    },{
-        rotation: 0,
-        y: '10px',
-        x:'-5px',
-
     });
 
     return tl;
 }
 
-const seekTime = 13;
+const seekTime = 12;
 
 let master = gsap.timeline(
     {
