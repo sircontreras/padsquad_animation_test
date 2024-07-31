@@ -88,7 +88,8 @@ body, html {
 #app #middleCircleOrange {
   width: 225px;
   height: 225px;
-  background-color: #ec6b29;
+  background: #e25720;
+  background: linear-gradient(174deg, #e25720 0%, #f9a020 100%);
   position: absolute;
   z-index: 3;
   right: -35px;

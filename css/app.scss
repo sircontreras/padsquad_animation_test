@@ -20,7 +20,6 @@ body, html{
   height: 250px;
   border: 1px solid black;
   background-color: $blue_dark_1;
-  //background-color: white;
   position: relative;
   overflow: hidden;
 
@@ -115,7 +114,8 @@ body, html{
 
     width: 225px;
     height: 225px;
-    background-color: $orange_medium_1;
+    background: $orange_medium_2;
+    background: linear-gradient(174deg, $orange_medium_2 0%, $orange_light_1 100%);
     position: absolute;
     z-index: 3;
     right: -35px;
